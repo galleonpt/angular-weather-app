@@ -51,7 +51,8 @@
             </span>
 
             <span>
-                <strong>Looking for a job: </strong> {{ searchedUser.hireable }}
+                <strong>Looking for a job: </strong>
+                <app-job-tag [job]="searchedUser.hireable" />
             </span>
 
             <span *ngIf="searchedUser.twitter_username">

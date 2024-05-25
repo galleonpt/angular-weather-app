@@ -9,6 +9,7 @@ import {
 import { GithubApiService } from './services/github-api.service';
 import { IGibthubUserInfo } from './types/github.types';
 import { CommonModule } from '@angular/common';
+import { JobTagComponent } from './components/job-tag/job-tag.component';
 
 interface ISearchForm {
     name: string;
@@ -17,7 +18,13 @@ interface ISearchForm {
 @Component({
     selector: 'app-root',
     standalone: true,
-    imports: [RouterOutlet, FormsModule, ReactiveFormsModule, CommonModule],
+    imports: [
+        RouterOutlet,
+        FormsModule,
+        ReactiveFormsModule,
+        CommonModule,
+        JobTagComponent,
+    ],
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
 })
