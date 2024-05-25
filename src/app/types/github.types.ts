@@ -7,7 +7,7 @@ export interface IGibthubUserInfo {
     avatar_url: string;
     bio: string;
     blog: string;
-    company: string;
+    company: string | null;
     email: string | null;
     followers: number;
     following: number;

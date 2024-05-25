@@ -31,7 +31,12 @@
                 <strong>Email: </strong>--
             </span>
 
-            <span> <strong>Company: </strong> {{ searchedUser.company }} </span>
+            <span *ngIf="searchedUser.company">
+                <strong>Company: </strong> {{ searchedUser.company }}
+            </span>
+            <span *ngIf="!searchedUser.company">
+                <strong>Company: </strong> --
+            </span>
 
             <span>
                 <strong>Followers: </strong> {{ searchedUser.followers }}
