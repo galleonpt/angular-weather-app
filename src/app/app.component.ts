@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { GithubApiService } from './services/github-api.service';
 
 @Component({
     selector: 'app-root',
@@ -8,6 +9,12 @@ import { RouterOutlet } from '@angular/router';
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
 })
-export class AppComponent {
-    title = 'angular-weather-app';
+export class AppComponent implements OnInit {
+    constructor(private githubApiService: GithubApiService) {}
+
+    ngOnInit(): void {
+        this.githubApiService
+            .getUserInfo()
+            .subscribe((data) => console.log(data));
+    }
 }

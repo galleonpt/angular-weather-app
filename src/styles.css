@@ -4,3 +4,8 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --text-color: #ccc;
+    --background-color: #212121;
+}
