@@ -8,9 +8,9 @@ import { IGibthubUserInfo } from '../types/github.types';
 export class GithubApiService {
     constructor(private http: HttpClient) {}
 
-    getUserInfo() {
+    getUserInfo(username: string) {
         return this.http.get<IGibthubUserInfo>(
-            'https://api.github.com/users/galleonpt'
+            `https://api.github.com/users/${username}`
         );
     }
 }

@@ -10,5 +10,54 @@
     </div>
 
     <!-- User card -->
-    <div></div>
+    <div class="userCard" *ngIf="searchedUser">
+        <div class="avatarContainer">
+            <img
+                src="{{ searchedUser.avatar_url }}"
+                alt="avatar"
+                width="75"
+                height="75"
+            />
+            <span> <strong>Name: </strong> {{ searchedUser.name }} </span>
+            <span> <strong>Type: </strong> {{ searchedUser.type }} </span>
+        </div>
+        <div class="userInfo">
+            <span *ngIf="searchedUser.email">
+                <strong>Email: </strong>
+                {{ searchedUser.email }}
+            </span>
+
+            <span *ngIf="!searchedUser.email">
+                <strong>Email: </strong>--
+            </span>
+
+            <span> <strong>Company: </strong> {{ searchedUser.company }} </span>
+
+            <span>
+                <strong>Followers: </strong> {{ searchedUser.followers }}
+            </span>
+
+            <span>
+                <strong>Following: </strong> {{ searchedUser.following }}
+            </span>
+
+            <span>
+                <strong>Repos: </strong> {{ searchedUser.public_repos }}
+            </span>
+
+            <span>
+                <strong>Looking for a job: </strong> {{ searchedUser.hireable }}
+            </span>
+
+            <span *ngIf="searchedUser.twitter_username">
+                <strong>Twitter Acc: </strong>
+                {{ searchedUser.twitter_username }}
+            </span>
+
+            <span *ngIf="!searchedUser.twitter_username">
+                <strong>Twitter Acc: </strong>
+                --
+            </span>
+        </div>
+    </div>
 </main>

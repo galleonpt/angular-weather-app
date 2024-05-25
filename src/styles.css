@@ -9,3 +9,13 @@
     --text-color: #ccc;
     --background-color: #212121;
 }
+
+body {
+    width: 100vw;
+    height: 100vh;
+    color: var(--text-color);
+    background-color: var(--background-color);
+
+    display: flex;
+    justify-content: center;
+}

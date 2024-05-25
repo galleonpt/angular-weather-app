@@ -1,9 +1,6 @@
 main {
     width: 100vw;
-    height: 100vh;
-
-    color: var(--text-color);
-    background-color: var(--background-color);
+    max-width: 75vw;
 }
 
 .searchContainer {
@@ -30,4 +27,43 @@ main {
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
+}
+
+.userCard {
+    width: 640px;
+    min-height: 400px;
+    display: flex;
+    border-radius: 8px;
+    background-color: rgb(0, 0, 0);
+}
+
+.avatarContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    border-right: 1px dashed var(--text-color);
+}
+
+.avatarContainer img {
+    border-radius: 50%;
+}
+
+.userInfo {
+    flex: 2;
+    padding: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.userInfo span {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
 }
