@@ -2,9 +2,11 @@
 
 <main>
     <!-- Input to searc an user -->
-    <div>
-        <span>Search for an user to find their stats</span>
-        <input disabled />
+    <div class="searchContainer">
+        <form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+            <h3>Search for an user to find their stats</h3>
+            <input type="text" id="name" formControlName="name" />
+        </form>
     </div>
 
     <!-- User card -->

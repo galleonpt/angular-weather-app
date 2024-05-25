@@ -5,3 +5,29 @@ main {
     color: var(--text-color);
     background-color: var(--background-color);
 }
+
+.searchContainer {
+    padding: 36px;
+}
+
+.searchContainer form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.searchContainer input {
+    width: 100%;
+    min-width: 100px;
+    max-width: 500px;
+    padding-inline-start: 12px;
+
+    height: 32px;
+    border: none;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
